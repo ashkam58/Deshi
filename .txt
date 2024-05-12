@@ -1,1 +1,8 @@
 Authentication 49:26
+53:27 is about basic register post and getting the data 
+
+xi6HfsuesDpwFLFo
+
+
+how to connect mongodb and node js?
+how to take from the screen in the React js??
