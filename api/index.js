@@ -6,6 +6,7 @@ const User = require ("./models/User")
 const bcrypt = require("bcryptjs");
 const jwt = require('jsonwebtoken');
 const cookiePaser = require('cookie-parser')
+require('dotenv').config();
 
 const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfoiu4534ijklakjf'
@@ -14,7 +15,7 @@ app.use(cors({credentials:true, origin:'http://localhost:3000'}));
 app.use(express.json());
 app.use(cookiePaser());
 
- mongoose.connect('mongodb+srv://ashkam58:khuljasimsimMongodb123@deshi.n9he69v.mongodb.net/?retryWrites=true&w=majority&appName=deshi')
+ mongoose.connect(`mongodb+srv://ashkam58:${process.env.MONGO_DB_API_KEY}@n9he69v.mongodb.net/?retryWrites=true&w=majority&appName=deshi`)
 
 
 app.post('/register', async (req, res)=>{
